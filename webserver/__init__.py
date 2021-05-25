@@ -1,2 +1,2 @@
 def _data():
-    print('Please USETh')
+    print('Please use command-line tool. Details in README File')
