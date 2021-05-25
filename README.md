@@ -14,7 +14,7 @@ Navigate to dist folder and hit the following command
 ````
 ## Usages
 1. Basic Command
-````python
+````powershell
     server --help
 ````
 This displayes all the options
@@ -32,14 +32,15 @@ port your port. Default 8000
 ````python
     server --host hostname --port port_number # These are optional parameter. These are not manditory
 ````
+If --update is passed along with the above flags, Host and Port will be added to settings.json
 
 4. Opening PHPMYADMIN
 ````python
     server --admin
 ````
 This open phpmyadmin.
-This is irrespective of the --host and --port (cannot use this with --admin)
-It open PhpMyAdmin under the port and host found in settings.json in installed folder. To Access and edit this file, --set can be use as a flag
+cannot use this with --admin
+It open PhpMyAdmin under the port and host found in settings.json in installed folder or The PORT and HOST passed with flag --port and --host previously. To Access and edit this file, --set can be use as a flag
 ````python
     server --set
 ````

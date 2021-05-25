@@ -8,6 +8,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--host', help='Host: Localhost')
     parser.add_argument('--port', help='Port: 8000')
+    parser.add_argument('--update', help='Pass this flag to Update settings.json with provided HOST and PORT (Default HOST Localhost and PORT 8000)', action='store_true')
     parser.add_argument('--admin', help='Open PhpMyAdmin HOST and PORT are irrespective to passed HOST and PORT. Change HOST and PORT in settings of this program for default. Cannot use --host and --port along with it', action="store_true")
     parser.add_argument('--set', help='Change settings. Cannot use --host and --port with it', action="store_true")
     arguments = parser.parse_args()
@@ -23,6 +24,15 @@ def main():
     else:
         port = int(arguments.port)
     if arguments.admin == False and arguments.set == False:
+        if arguments.update:
+            filePath = os.path.join(current_path, 'settings.json')
+            jsonFile = open(filePath, 'r+')
+            raw_data = json.load(jsonFile)
+            raw_data['host'] = host
+            raw_data['port'] = port
+            jsonFile.seek(0)
+            json.dump(raw_data, jsonFile, indent=4)
+            jsonFile.truncate()
         serverNow(host, port)
         print('Working')
     else:
