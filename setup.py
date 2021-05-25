@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='webserver',
-    version='1.0.1',
+    version='1.0.2',
     description='This is a small web server to server PHP files',
     keyword='php webserver localhost',
     author='Sachin Acharya',
