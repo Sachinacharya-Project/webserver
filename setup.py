@@ -8,7 +8,11 @@ setup(
     author='Sachin Acharya',
     author_email='acharyaraj71@gmail.com',
     packages=['webserver'],
-    install_requires = ['pathlib', ''],
+    install_requires = ['pathlib'],
+    package_data={
+        '': ['Liscence.md', 'php-cli-server.ini', 'README.md', 'settings.json']
+    },
+    include_package_data=True,
     entry_points = {
         'console_scripts': [
             'server = webserver.__main__:main'

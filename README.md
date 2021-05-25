@@ -10,7 +10,7 @@ This is Command-Line Tool
 You can find .whl(wheel) file in dist folder.
 Navigate to dist folder and hit the following command
 ````python
-pip install wheel_file_name # For Unit it would be pip3 instead of pip
+    python -m pip install wheel_file_name # For Unit it would be pip3 instead of pip
 ````
 ## Usages
 1. Basic Command
