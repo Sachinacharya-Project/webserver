@@ -12,8 +12,9 @@ add it in your system path variable)
 You can find .whl(wheel) file in dist folder.  
 Navigate to dist folder and hit the following command  
 ````powershell
-    python -m pip install wheel_file_name # For Unix it would be pip3 instead of just pip
+    python -m pip install wheel_file_name
 ````
+try pip3 if pip didn't work.  
 ## Warning
 For Python version above or equals to 3.10, only version 3 (webserver-1.0.3-py3-none-any.whl) will work.  
 I don't know but I find it hard to install pathlib in these versions of python which is essential package for webserver.  
