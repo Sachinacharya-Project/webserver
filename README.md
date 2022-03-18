@@ -1,21 +1,21 @@
 # webserver
-This is simple webserver from PHP development Environments.
-This helps you to use local-webserver for your developement environment.
-This feature came along with the PHP you have on you computer.
-This program just help to access it with single command.
-This is Command-Line Tool
+This is simple webserver that uses PHP development Environments.  
+This helps you to use local-webserver for your developement environment.  
+This feature came along with the PHP you have on you computer.  
+This program just help to access it with single command.  
+This is Command-Line Tool  
 
 ----------------------------------------------------
 ## Installation
-You can find .whl(wheel) file in dist folder.
-Navigate to dist folder and hit the following command
+You can find .whl(wheel) file in dist folder.  
+Navigate to dist folder and hit the following command  
 ````powershell
     python -m pip install wheel_file_name # For Unix it would be pip3 instead of just pip
 ````
 ## Warning
-For Python version above or equals to 3.10, only version 3 (webserver-1.0.3-py3-none-any.whl) will work.
-I don't know but I find it hard to install pathlib in these versions of python which is essential package for webserver.
-However, version 3 (webserver) uses pathlib2 so it is good to go.
+For Python version above or equals to 3.10, only version 3 (webserver-1.0.3-py3-none-any.whl) will work.  
+I don't know but I find it hard to install pathlib in these versions of python which is essential package for webserver.  
+However, version 3 (webserver) uses pathlib2 so it is good to go.  
 
 There is no difference between v2 and v3 otherthan pathlib packages
 ## Usages
@@ -33,8 +33,8 @@ This start server on port 8000
 URL: http://localhost:8000
 
 3. Passing Options
-host: your hostname. Default localhost or 127.0.0.1
-port your port. Default 8000
+host: your hostname. Default localhost or 127.0.0.1  
+port your port. Default 8000  
 ````powershell
     server --host hostname --port port_number # These are optional parameter. These are not manditory
 ````
@@ -44,8 +44,8 @@ If --update is passed along with the above flags, Host and Port will be added to
 ````powershell
     server --admin
 ````
-This open phpmyadmin.
-cannot use this with --admin
+This opens phpmyadmin.  
+cannot use this with --admin  
 It opens PhpMyAdmin under the port and host found in settings.json in installed folder or The PORT and HOST passed with flag --port and --host previously. To Access and edit this file, --set can be use as a flag
 ````powershell
     server --set
