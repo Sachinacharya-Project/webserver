@@ -46,7 +46,9 @@ If --update is passed along with the above flags, Host and Port will be added to
 ````
 This opens phpmyadmin.  
 cannot use this with --admin  
-It opens PhpMyAdmin under the port and host found in settings.json in installed folder or The PORT and HOST passed with flag --port and --host previously. To Access and edit this file, --set can be use as a flag
+It opens PhpMyAdmin under the port and host found in settings.json in installed folder or  
+The PORT and HOST passed with flag --port and --host previously.  
+To Access and edit this file, --set can be use as a flag.  
 ````powershell
     server --set
 ````
