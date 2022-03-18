@@ -7,7 +7,7 @@ This is Command-Line Tool
 
 ----------------------------------------------------
 ## Installation
-(Note: To use this module, you must have PHP installed in your device <a href='https://www.php.net/downloads' target='_blank'>which you can find here</a>  
+(Note: To use this module, you must have PHP installed in your device [which you can download from here](https://www.php.net/downloads)  
 add it in your system path variable)  
 You can find .whl(wheel) file in dist folder.  
 Navigate to dist folder and hit the following command  
