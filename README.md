@@ -7,6 +7,7 @@ This is Command-Line Tool
 
 ----------------------------------------------------
 ## Installation
+(Note: To use this module, you must have PHP installed in your device [https://www.php.net/downloads](which you can download from here))
 You can find .whl(wheel) file in dist folder.  
 Navigate to dist folder and hit the following command  
 ````powershell
