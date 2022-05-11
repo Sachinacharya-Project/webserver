@@ -1,7 +1,7 @@
 # webserver
 This is simple webserver that uses PHP development Environments.  
 This helps you to use local-webserver for your developement environment.  
-This feature came along with the PHP you have on you computer.  
+This feature comes along with the PHP you have on you computer.  
 This program just help to access it with single command.  
 This is a Command-Line Tool  
 
