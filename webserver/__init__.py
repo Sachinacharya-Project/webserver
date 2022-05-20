@@ -1,2 +1,7 @@
-def _data():
-    print('Please use command-line tool. Details in README File')
+def server():
+    import os
+    print("Please use command-line options")
+    try:
+        os.system("server --help")
+    except:
+        print("Perhaps you haven't installed cli-webserver")

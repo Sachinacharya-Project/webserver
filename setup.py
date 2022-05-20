@@ -2,13 +2,14 @@ from setuptools import setup
 
 setup(
     name='webserver',
-    version='1.0.3',
+    version='2.0.1',
     description='This is a small web server to server PHP files',
-    keyword='php webserver localhost',
+    keywords='php webserver localhost',
     author='Sachin Acharya',
-    author_email='acharyaraj71@gmail.com',
+    author_email='acharyaraj71+webserver@gmail.com',
     packages=['webserver'],
-    install_requires = ['pathlib2'],
+    install_requires = ['py_setenv'], # pathlib2
+    url='https://github.com/sachin-acharya-projects/webserver',
     package_data={
         '': ['Liscence.md', 'php-cli-server.ini', 'README.md', 'settings.json']
     },

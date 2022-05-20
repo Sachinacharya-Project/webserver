@@ -55,3 +55,11 @@ To Access and edit this file, --set can be use as a flag.
 ````powershell
     server --set
 ````
+
+## Downloads
+Download different versions of installer from here
+____
+* v1.0.1 [webserver-1.0.1-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.1-py3-none-any.whl)
+* v1.0.1 [webserver-1.0.2-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.2-py3-none-any.whl)
+* v1.0.1 [webserver-1.0.3-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.3-py3-none-any.whl)
+* v1.0.1 [webserver-2.0.1-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-2.0.1-py3-none-any.whl)
