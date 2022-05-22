@@ -12,7 +12,7 @@ add it in your system path variable)
 You can find .whl(wheel) file in dist folder.  
 Navigate to dist folder and hit the following command  
 ````powershell
-    python -m pip install wheel_file_name
+python -m pip install wheel_file_name
 ````
 try pip3 if pip didn't work.  
 ## Warning
