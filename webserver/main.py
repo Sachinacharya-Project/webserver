@@ -5,7 +5,7 @@ current_path = os.path.dirname(os.path.abspath(__file__))
 colorama.init(autoreset=True)
 
 help_text = """
-usage: test.py [-h] [--host HOST] [--port PORT] [--admin] [--admin-port ADMIN_PORT] [--set] [--add-path] [-D] [--reset]
+usage: server [-h] [--host HOST] [--port PORT] [--admin] [--admin-port ADMIN_PORT] [--set] [--add-path] [-D] [--reset]
 
 Launches Localhost server from PHP development Environment
     php -s host:port
