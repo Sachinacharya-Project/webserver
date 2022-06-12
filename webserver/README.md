@@ -11,9 +11,9 @@ This is a Command-Line Tool
 add it in your system path variable)  
 You can find .whl(wheel) file in dist folder.  
 Navigate to dist folder and hit the following command  
-````powershell
-    python -m pip install wheel_file_name
-````
+    ````powershell
+        python -m pip install wheel_file_name
+    ````
 try pip3 if pip didn't work.  
 ## Warning
 For Python version above or equals to 3.10, only version 3 (webserver-1.0.3-py3-none-any.whl) will work.  
@@ -59,7 +59,18 @@ To Access and edit this file, --set can be use as a flag.
 ## Downloads
 Download different versions of installer from here
 ____
-* v1.0.1 [webserver-1.0.1-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.1-py3-none-any.whl)
-* v1.0.2 [webserver-1.0.2-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.2-py3-none-any.whl)
-* v1.0.3 [webserver-1.0.3-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-1.0.3-py3-none-any.whl)
-* v2.0.1 [webserver-2.0.1-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/webserver-2.0.1-py3-none-any.whl)
+* v1.0.1 `Packages has been removed`
+* v1.0.2 `Packages has been removed`
+* v1.0.3 `Packages has been removed`
+* v2.0.1  
+[sachin_webserver-2.0.1-py3-none-any.whl](https://github.com/sachin-acharya-projects/webserver/raw/main/dist/sachin_webserver-2.0.1-py3-none-any.whl)
+
+    Installation via pip
+    ````cmd
+    pip install webserver
+    ````
+
+* Latest  
+    ````cmd
+    pip install git+https://github.com/sachin-acharya-projects/webserver
+    ````

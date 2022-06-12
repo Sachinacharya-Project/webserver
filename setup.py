@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='webserver',
+    name='sachin@webserver',
     version='2.0.1',
-    description='This is a small web server to server PHP files',
+    description='This is a small web server to serve PHP/Web files',
     keywords='php webserver localhost',
     author='Sachin Acharya',
     author_email='acharyaraj71+webserver@gmail.com',
@@ -13,6 +13,11 @@ setup(
     package_data={
         '': ['Liscence.md', 'php-cli-server.ini', 'README.md', 'settings.json']
     },
+    classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     include_package_data=True,
     entry_points = {
         'console_scripts': [
@@ -20,4 +25,5 @@ setup(
         ]
     }
 )
+
 # python .\setup.py sdist bdist_wheel
