@@ -8,7 +8,7 @@ setup(
     author='Sachin Acharya',
     author_email='acharyaraj71+webserver@gmail.com',
     packages=['webserver'],
-    install_requires = ['py_setenv'], # pathlib2
+    install_requires = ['py_setenv', 'colorama'], # pathlib2
     url='https://github.com/sachin-acharya-projects/webserver',
     package_data={
         '': ['Liscence.md', 'php-cli-server.ini', 'README.md', 'settings.json']
