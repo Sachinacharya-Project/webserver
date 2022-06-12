@@ -15,3 +15,9 @@ You can see all the changes or update made on different version of webserver pac
         `-D`
 
 * Solved problems with applying new custom settings  
+_(version upto 201 are removed - only 2.0.2 and up are available)_
+**v2.0.2**
+   * Uploaded to pypi
+      ````
+      pip install sachin_webserver
+      ````
