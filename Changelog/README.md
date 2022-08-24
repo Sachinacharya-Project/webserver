@@ -13,6 +13,8 @@ You can see all the changes or update made on different version of webserver pac
     * This option run the server using default option even though the settings were change (Does not update settings)  
     *option*  
         `-D`
+**v2.0.3**
+* Platform-independent
 
 * Solved problems with applying new custom settings  
 
