@@ -10,7 +10,7 @@ ____
 
     Installation via pip
     ````cmd
-    pip install webserver
+    pip install sachin-webserver
     ````
 
 * Latest  
