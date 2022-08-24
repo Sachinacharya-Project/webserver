@@ -1,5 +1,8 @@
-import os, webbrowser, json, sys, colorama
-from py_setenv import setenv
+import os, webbrowser, json, sys, colorama, platform, subprocess
+try:
+    from py_setenv import setenv
+except ModuleNotFoundError:
+    pass
 current_path = os.path.dirname(os.path.abspath(__file__))
 
 colorama.init(autoreset=True)
@@ -157,16 +160,31 @@ def main():
     
     # Adding to SystemPath if asked
     if arguments.add_path:
-        if not doesExist(current_path):
-            setenv("path", value=current_path, append=True, user=True, suppress_echo=True)
-            print(f"{colorama.Fore.CYAN}Location {current_path} has been [APPENED] to [PATH]")
+        if platform.system() != "Windows":
+            print(f"{colorama.Fore.LIGHTRED_EX}Sorry for inconvinence, ADD TO PATH is only available for Windows. You must manually add to PATH or install with PIP command\npip3 install sachin-webserver")
+        else:
+            if not doesExist(current_path):
+                setenv("path", value=current_path, append=True, user=True, suppress_echo=True)
+                print(f"{colorama.Fore.CYAN}Location {current_path} has been [APPENED] to [PATH]")
 
     # Checking if admin is asked
     if arguments.admin_port:
         adminPort = arguments.admin_port
     else:
         adminPort = port
-    
     serverNow(host, port, arguments.admin, adminPort)
 if __name__ == '__main__':
-    main()
+    try:
+        subprocess.check_output("php -h", shell=True, stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError as e:
+        output = e.output.decode()
+        for message in ["not found", "not recognized"]:
+            if message in output:
+                print(f"{colorama.Fore.LIGHTRED_EX}Sorry, could not found the PHP in SYSTEM PATH. Please Install PHP if not already")
+                if platform.system() == 'Linux':
+                    print(f"{colorama.Fore.LIGHTRED_EX}You can install PHP with following command\n\nsudo apt install php8.1-cli")
+            break
+        else:
+            print(f"{colorama.Fore.LIGHTRED_EX}Some Errors has occured\n{output} \nwith ReturnCode {e.returncode}")
+    else:
+        main()
