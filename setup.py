@@ -1,9 +1,15 @@
 from setuptools import setup
+from pathlib import Path
+
+this_directory = Path(__file__).parent
+long_desciption = (this_directory / "README.md").read_text()
 
 setup(
     name='sachin@webserver',
-    version='2.0.3',
+    version='2.0.4',
     description='This is a small web server to serve PHP/Web files',
+    long_description=long_desciption,
+    long_description_content_type='text/markdown',
     keywords='php webserver localhost',
     author='Sachin Acharya',
     author_email='acharyaraj71+webserver@gmail.com',
