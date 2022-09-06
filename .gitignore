@@ -1,7 +1,7 @@
 __pycache__
 build
 global
-webserver.egg-info
+sachin_webserver.egg-info
 todo
 test.py
 .\settings.js
