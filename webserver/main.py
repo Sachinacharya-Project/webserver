@@ -25,13 +25,16 @@ options:
                         module using pip, no need to use this option)
     -D                    Run server with default parameters irrespective to the settings changed (is incompatible with --host or --port)
     --reset               Reset settings to default. Use this option incase of errors
+    --dnt                 Don't open the url in the browser when being started
 """
 
-def serverNow(host, port, isAdminReq, adminPort):
-    if isAdminReq:
-        webbrowser.open_new_tab('http://{}:{}/phpmyadmin'.format(host, adminPort))
-    else:
-        webbrowser.open_new_tab('http://{}:{}'.format(host, adminPort))
+def serverNow(host, port, isAdminReq, adminPort, isAllowed=False): # isAllowed -- for browser
+    "To bore to change code for isAllowed parameter"
+    if not isAllowed:
+        if isAdminReq:
+            webbrowser.open_new_tab('http://{}:{}/phpmyadmin'.format(host, adminPort))
+        else:
+            webbrowser.open_new_tab('http://{}:{}'.format(host, adminPort))
     os.system('php -S {}:{}'.format(host, port))
 
 def doesExist(path: str):
@@ -104,6 +107,7 @@ def argumentParser():
     
     parser.add_argument('-D', help="Run server with default parameters irrespective to the settings changed (is incompatible with --host or --port)", action='store_true')
     parser.add_argument("--reset", help="Reset settings to default. Use this option incase of errors", action='store_true')
+    parser.add_argument("--dnt", help="Do not open the browser when being started")
     
     return parser
 def main():
@@ -116,6 +120,8 @@ def main():
         ('--admin-port', False),
         ('--set', True),
         
+        ("--dnt", True),
+
         ('--add-path', True),
         ('-D', True),
         ('--reset', True),
@@ -172,7 +178,7 @@ def main():
         adminPort = arguments.admin_port
     else:
         adminPort = port
-    serverNow(host, port, arguments.admin, adminPort)
+    serverNow(host, port, arguments.admin, adminPort, arguments.dnt)
 if __name__ == '__main__':
     try:
         subprocess.check_output("php -h", shell=True, stderr=subprocess.STDOUT)
