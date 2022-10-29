@@ -6,7 +6,7 @@ long_desciption = (this_directory / "README.md").read_text()
 
 setup(
     name='sachin@webserver',
-    version='2.0.4',
+    version='2.0.6',
     description='This is a small web server to serve PHP/Web files',
     long_description=long_desciption,
     long_description_content_type='text/markdown',

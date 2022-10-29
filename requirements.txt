@@ -1,2 +1,3 @@
 wheel
 py_setenv
+twine

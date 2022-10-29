@@ -1,4 +1,8 @@
 import os, webbrowser, json, sys, colorama, platform, subprocess
+
+__version__ = "2.0.6"
+__author__ = "Sachin Acharya (acharyaraj71+webserver@gmail.com)"
+
 try:
     from py_setenv import setenv
 except ModuleNotFoundError:
@@ -20,6 +24,9 @@ options:
     --admin               Run server and open phpmyadmin on the same port
     --admin-port ADMIN_PORT
                         If you have running MySql on different port use this option
+
+    --version, -v             Show version of current application and return
+
     --set                 Update settings with the provided/available port
     --add-path            Add the directory of main file to SYSTEM EVIRONMENT PATH VARIABLE to make this globally accessible. (If you installed this
                         module using pip, no need to use this option)
@@ -119,6 +126,9 @@ def main():
         
         ('--admin-port', False),
         ('--set', True),
+
+        ("--version", True),
+        ("-v", True),
         
         ("--dnt", True),
 
@@ -133,6 +143,8 @@ def main():
     if arguments.help or arguments.h:
         print(f"{colorama.Fore.CYAN}{help_text}")
         sys.exit()
+    if arguments.v or arguments.version:
+        exit(f"{colorama.Fore.LIGHTCYAN_EX}Version {__version__} By {__author__}")
     host = ''
     port = ''
 
